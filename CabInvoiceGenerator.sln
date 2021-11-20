@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabInvoiceGenerator", "CabInvoiceGenerator\CabInvoiceGenerator.csproj", "{66C157DA-FED5-47AC-B29B-632489CF7A22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66C157DA-FED5-47AC-B29B-632489CF7A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C157DA-FED5-47AC-B29B-632489CF7A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C157DA-FED5-47AC-B29B-632489CF7A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C157DA-FED5-47AC-B29B-632489CF7A22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFB6D78E-D11C-4E2E-881F-47928B17AC71}
+	EndGlobalSection
+EndGlobal
