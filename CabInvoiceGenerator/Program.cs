@@ -6,7 +6,10 @@ namespace CabInvoiceGenerator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine(" WELCOME TO CAB INVOICE GENERATOR");
+            InvoiceGenerator invoiceGenerator = new InvoiceGenerator();
+            double toatalFare = invoiceGenerator.CaculateFare(500, 5);
+            Console.WriteLine("Total Fare Of Journey : " + toatalFare);
         }
     }
 }
