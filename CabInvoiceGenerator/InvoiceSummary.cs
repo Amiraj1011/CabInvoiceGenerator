@@ -18,6 +18,19 @@ namespace CabInvoiceGenerator
             this.totalFare = totalFare;
             this.averageFare = numberOfRides / totalFare;
         }
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            if (!(obj is InvoiceSummary))
+            {
+                return false;
+            }
+            InvoiceSummary inputedObject = (InvoiceSummary)obj;
+            return this.numberOfRides == inputedObject.numberOfRides && this.totalFare == inputedObject.totalFare && this.averageFare == inputedObject.averageFare;
+        }
     }
 }
 

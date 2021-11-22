@@ -90,6 +90,24 @@ namespace CabInvoiceGenerator
             return totalFare;
 
         }
+        public InvoiceSummary CalculateFarefor(Ride[] rides)
+        {
+            double totalFare = 0;
+            try
+            {
+                //calculating total fare for all rides
+                foreach (Ride ride in rides)
+                {
+                    totalFare += this.CalculateFare(ride.distance, ride.time);
+                }
+            }
+            catch (CabInvoiceException)
+            {
+                throw new CabInvoiceException(CabInvoiceException.ExceptionType.NULL_RIDES, "Rides are Null");
+            }
+            return new InvoiceSummary(rides.Length, totalFare);
+
+        }
 
     }
 }
