@@ -45,7 +45,7 @@ namespace CabInvoiceGenerator
 
         }
         //This method for calculate toptal fare of journey
-        public double CaculateFare(double distance, int time)
+        public double CalculateFare(double distance, int time)
         {
             double totalFare = 0;
             try
@@ -70,6 +70,24 @@ namespace CabInvoiceGenerator
 
             }
             return Math.Max(totalFare, MINIMUM_FARE);
+
+        }
+        public double CalculateFare(Ride[] rides)
+        {
+            double totalFare = 0;
+            try
+            {
+                //calculating total fare for all rides
+                foreach(Ride ride in rides)
+                {
+                    totalFare += this.CalculateFare(ride.distance, ride.time);
+                }
+            }
+            catch(CabInvoiceException)
+            {
+                throw new CabInvoiceException(CabInvoiceException.ExceptionType.NULL_RIDES, "Rides are Null");
+            }
+            return totalFare;
 
         }
 

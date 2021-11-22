@@ -19,8 +19,24 @@ namespace CabInvoiceTest
 
 
             //Act
-            double totalFare = invoiceGenerator.CaculateFare(distance, time);
+            double totalFare = invoiceGenerator.CalculateFare(distance, time);
             
+            //Assert
+            Assert.AreEqual(expected, totalFare);
+        }
+        //UC2 : Test case for checking total fare for multiple rides
+        [TestMethod]
+        public void GivenMultipleRidesShouldReturnTotalFare()
+        {
+            //AAA method
+            //Arrange
+            InvoiceGenerator invoiceGenerator = new InvoiceGenerator(RideType.NORMAL);
+            Ride[] rides = { new Ride(2.0, 5), new Ride(0.1, 1) };
+            double expected = 30;
+
+            //Act
+            double totalFare = invoiceGenerator.CalculateFare(rides);
+
             //Assert
             Assert.AreEqual(expected, totalFare);
         }
